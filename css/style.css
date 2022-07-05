@@ -2,17 +2,64 @@
     box-sizing:border-box;
     margin: 0;
     padding: 0;
+    
 }
 
-
-
 .square {
-    background-color: aqua;
+    
     height: 200px;
     border: 2px solid black;
 }
 
-.x {
+.imgSquare{
     height: 150px;
     width: 150px;
+}
+
+.x{
+    height: 190px;
+    width: 190px;
+    
+}
+
+.o{
+    height: 190px;
+    width: 190px;
+}
+
+.btn:disabled{
+    opacity: 1 !important;
+    cursor: not-allowed;
+}
+
+.gameOver {
+    display: none;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.gameOverText {
+    position: fixed;
+    top: -200px;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transform: translateX(185%);
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    /*transition: 0.1s ease-out;*/
+    display: hidden;
+}
+
+.reset {
+    transform: translateX(725%)
 }
