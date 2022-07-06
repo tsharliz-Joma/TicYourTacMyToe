@@ -52,14 +52,27 @@ button.on('click', function(){
     let div8ImgSrc = String($('.d8 img').attr('src'))
     let div9ImgSrc = String($('.d9 img').attr('src'))
 
-    const winCondition1 = div1ImgSrc === imgSrc1 && div2ImgSrc === imgSrc1 && div3ImgSrc === imgSrc1 ;
-    const winCondition2 = div1ImgSrc === imgSrc1 && div4ImgSrc === imgSrc1 && div7ImgSrc === imgSrc1 ;
-    const winCondition3 = div2ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div8ImgSrc === imgSrc1 ;
-    const winCondition4 = div1ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const winCondition5 = div4ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 ;
-    const winCondition6 = div7ImgSrc === imgSrc1 && div8ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const winCondition7 = div3ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const winCondition8 = div7ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div3ImgSrc === imgSrc1 ;
+    
+    const o1 = div1ImgSrc === imgSrc1;
+    const o2 = div2ImgSrc === imgSrc1;
+    const o3 = div3ImgSrc === imgSrc1;
+
+    const o4 = div1ImgSrc === imgSrc1;
+    const o5 = div4ImgSrc === imgSrc1;
+    const o6 = div7ImgSrc === imgSrc1;
+
+    const o7 = div2ImgSrc === imgSrc1;
+    const o8 = div5ImgSrc === imgSrc1;
+    const o9 = div8ImgSrc === imgSrc1;
+
+    const win123 = o1 && o2 && o3 ;
+    const win147 = o4 && o5 && o6 ;
+    const win258 = o7 && o8 && o9 ;
+    const win159 = div1ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
+    const win456 = div4ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 ;
+    const win789 = div7ImgSrc === imgSrc1 && div8ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
+    const win369 = div3ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
+    const win753 = div7ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div3ImgSrc === imgSrc1 ;
 
     const winCondition9 = div1ImgSrc === imgSrc2 && div2ImgSrc === imgSrc2 && div3ImgSrc === imgSrc2 ;
     const winCondition10 = div1ImgSrc === imgSrc2 && div4ImgSrc === imgSrc2 && div7ImgSrc === imgSrc2 ;
@@ -72,132 +85,75 @@ button.on('click', function(){
     
     const randomIndex = Math.floor(Math.random() * 200);
 
+    const Xwon = function(){
+        button.attr('disabled', true)
+        gameOver.addClass('visible');
+        gameOverText.html('Sassy wins')
+        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
+        row.addClass('invisible')
+        $('.XkeepingCount').append('I')
+    }
 
-    if(winCondition1 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition2 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible') 
-        $('.XkeepingCount').append('I')
-    } else if(winCondition3 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible') 
-        $('.XkeepingCount').append('I')
-    } else if(winCondition4 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition5 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition6 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition7 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition8 && turns9){
-       button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Sassy wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.XkeepingCount').append('I')
-    } else if(winCondition9 && turns9){
+    const Ywon = function(){
         $('.OkeepingCount').append('I')
         button.attr('disabled', true)
         gameOver.addClass('visible');
         gameOverText.html('Pepe wins')
         gameOverText.css({'transform': `translateX(${randomIndex}%)`})
         row.addClass('invisible')
-        
-    } else if(winCondition10 && turns9){
-        $('.OkeepingCount').append('I')
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-       
-    } else if(winCondition11 && turns9){
-        $('.OkeepingCount').append('I')
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
+    }
 
-    } else if(winCondition12 && turns9){
-        $('.OkeepingCount').append('I')
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-
-    } else if(winCondition13 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible');
-        $('.OkeepingCount').append('I')
-    } else if(winCondition14 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.OkeepingCount').append('I')
-    } else if(winCondition15 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.OkeepingCount').append('I')
-    } else if(winCondition16 && turns9){
-        button.attr('disabled', true)
-        gameOver.addClass('visible');
-        gameOverText.html('Pepe wins')
-        gameOverText.css({'transform': `translateX(${randomIndex}%)`})
-        row.addClass('invisible')
-        $('.OkeepingCount').append('I')
-    } else if($('.btn').attr('disabled') && turns === 9){
+    const draw = function(){
         gameOver.addClass('visible')
         gameOverText.css({'transform': `translateX(${randomIndex}%)`})
         gameOverText.html('Draw')
         row.addClass('invisible')
-        $('.OkeepingCount').append('I')
-    }  
+        
+    }
 
-    
+    //Array or object that holds the winconditions for X 
+        // it loops through the win conditons 
+            //if any match it return that condition and the next funcitonn that accepts conditons 
+                //checks add turns9 to the condtion and returns Xwon
+
+
+        // Turn this into a function that accepts a win conditon
+    if(win123 && turns9){
+        Xwon()
+    } else if(win147 && turns9){
+        Xwon()
+    } else if(win258 && turns9){
+       Xwon()
+    } else if(win159 && turns9){
+       Xwon()
+    } else if(win456 && turns9){
+       Xwon()
+    } else if(win789 && turns9){
+        Xwon()
+    } else if(win369 && turns9){
+        Xwon()
+    } else if(win753 && turns9){
+        Xwon()
+    } else if(winCondition9 && turns9){
+        Ywon()
+    } else if(winCondition10 && turns9){
+        Ywon()
+    } else if(winCondition11 && turns9){
+        Ywon()
+    } else if(winCondition12 && turns9){
+        Ywon()
+    } else if(winCondition13 && turns9){
+        Ywon()
+    } else if(winCondition14 && turns9){
+        Ywon()
+    } else if(winCondition15 && turns9){
+        Ywon()
+    } else if(winCondition16 && turns9){
+        Ywon()
+    } else if($('.btn').attr('disabled') && turns === 9){
+        draw()
+    } ;
+
 });
 
 
