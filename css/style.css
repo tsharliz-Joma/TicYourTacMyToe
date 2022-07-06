@@ -1,10 +1,21 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Righteous&family=Yellowtail&display=swap');
+/*font-family: 'Orbitron', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Yellowtail', cursive;*/
+
+
 * {
     box-sizing:border-box;
     margin: 0;
     padding: 0;
-    
 }
 
+
+.text-center {
+    font-size: 4em;
+}
 .square {
     
     height: 200px;
@@ -61,5 +72,5 @@
 }
 
 .reset {
-    transform: translateX(725%)
+    transform: translateX(600%)
 }

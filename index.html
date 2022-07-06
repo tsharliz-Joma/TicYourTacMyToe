@@ -7,17 +7,24 @@
             TiC tAc TOE
         </title>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./Bootstrap/bootstrap_css/css/bootstrap.css">
+        <link rel="stylesheet" href="./bootstrap_css/css/bootstrap.css">
     </head> 
     <body>
 
+        
 
-    <div class="container col-lg-8">
-        <h1 class="text-center">Tic My Tac your Toe</h1>    
-    <div class="container col-lg-8 ">
-        <div class="row justify-content-center">
+    <div class="container col-12">
+        <h1 class="text-center">Tic My Tac your Toe</h1> 
 
-            
+    <div class="container col-12 d-flex justify-content-between">
+
+        <div class="col-2 text-center">
+            <p>Pepe</p>
+            <p class="OkeepingCount">
+
+            </p>
+        </div>
+        <div class="row col-6 justify-content-center">
             <button class=" d1 col-4 square border-end border-bottom btn"><div></div></button>
             <button class=" d2 col-4 square border-end border-bottom border-start btn"><div></div></button>
             <button class=" d3 col-4 square border-bottom border-start btn"><div></div></button>
@@ -27,7 +34,13 @@
             <button class=" d7 col-4 square border-top border-end btn"><div></div></button>
             <button class=" d8 col-4 square border-start border-top border-end btn"><div></div></button>
             <button class=" d9 col-4 square border-start border-top btn"><div></div></button>
-            
+        </div>
+
+        <div class="col-2 text-center">
+            <p>Sassy</p>
+            <p class="XkeepingCount">
+
+            </p>
         </div>
         <div class="col-12 text-center gameOver">
             <span class="gameOverText"></span>
@@ -35,10 +48,11 @@
             <span class="Ywins"></span>
             <button class="reset">Reset</button>
         </div>
+
     </div>
 
-        <script src="./_Jquery/Jquery.js"></script>
-        <script src="./Bootstrap/boostrap_js/js/bootstrap.js"></script>
+        <script src="./Jquery/Jquery.js"></script>
+        <script src="./boostrap_js/js/bootstrap.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>
