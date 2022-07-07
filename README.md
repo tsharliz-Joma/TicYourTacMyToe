@@ -25,6 +25,6 @@ I used bootstrap just because it was the first thing that came to my head when i
 
 ## How To.
 
-Just go to this [.....]() which at this point i cant figure out why it wont work but i just want to finish this.
+Just go to this [.....](https://tsharliz-joma.github.io/TicYourTacMyToe/) ~~which at this point i cant figure out why it wont work but i just want to finish this~~ and play to your hearts content.
 
 There is no installation needed...I think but have fun <d-_-b>.
