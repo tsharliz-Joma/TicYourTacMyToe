@@ -17,12 +17,19 @@ const Xwins = $('.Ywins');
 const resetButton = $('.reset')
 
 
+    
+
+
+
+    
+// ===
 button.on('click', function(){
     turns++
     //Disables the button that has been clicked
     $(this).attr('disabled', true)
 
     const imgXO = turns % 2 === 0;
+    const turns9 = turns <= 9 ;
 
     if(imgXO){
         $(this).html(set0); 
@@ -31,57 +38,43 @@ button.on('click', function(){
     };
     
     const noMoreTurns = turns === 10 ;
+
     const buttonDisabled = $(this).attr('disabled', true)
 
     if(noMoreTurns){
         buttonDisabled;
     }
 
-    const turns9 = turns <= 9 ;
+    // const imgSrc1 = './images/sassy.png' ;
+    // const imgSrc2 = './images/pepe.png' ;
 
-    const imgSrc1 = './images/sassy.png' ;
-    const imgSrc2 = './images/pepe.png' ;
+    /*
+    const imgSrcCheck
+    const imgSrcCheck = function(){
+        for(let i = 0; i < imgSrc.length; i++){
+            if(){}
+        }
+    }
+    */
+    const winCondition1 = $('.d1 img').hasClass('x') && $('.d2 img').hasClass('x') && $('.d3 img').hasClass('x');
+    const winCondition2 = $('.d1 img').hasClass('x') && $('.d4 img').hasClass('x') && $('.d7 img').hasClass('x');
+    const winConditino3 = $('.d2 img').hasClass('x') && $('.d5 img').hasClass('x') && $('.d8 img').hasClass('x');
+    const winCondition4 = $('.d1 img').hasClass('x') && $('.d5 img').hasClass('x') && $('.d9 img').hasClass('x');
+    const winCondition5 = $('.d4 img').hasClass('x') && $('.d5 img').hasClass('x') && $('.d6 img').hasClass('x');
+    const winCondition6 = $('.d7 img').hasClass('x') && $('.d8 img').hasClass('x') && $('.d9 img').hasClass('x');
+    const winCondition7 = $('.d3 img').hasClass('x') && $('.d6 img').hasClass('x') && $('.d9 img').hasClass('x');
+    const winCondition8 = $('.d7 img').hasClass('x') && $('.d5 img').hasClass('x') && $('.d3 img').hasClass('x');
 
-    let div1ImgSrc = String($('.d1 img').attr('src'))
-    let div2ImgSrc = String($('.d2 img').attr('src'))
-    let div3ImgSrc = String($('.d3 img').attr('src'))
-    let div4ImgSrc = String($('.d4 img').attr('src'))
-    let div5ImgSrc = String($('.d5 img').attr('src'))
-    let div6ImgSrc = String($('.d6 img').attr('src'))
-    let div7ImgSrc = String($('.d7 img').attr('src'))
-    let div8ImgSrc = String($('.d8 img').attr('src'))
-    let div9ImgSrc = String($('.d9 img').attr('src'))
+    const winCondition9 = $('.d1 img').hasClass('o') && $('.d2 img').hasClass('o') && $('.d3 img').hasClass('o');
+    const winCondition10 = $('.d1 img').hasClass('o') && $('.d4 img').hasClass('o') && $('.d7 img').hasClass('o');
+    const winCondition11 = $('.d2 img').hasClass('o') && $('.d5 img').hasClass('o') && $('.d8 img').hasClass('o');
+    const winCondition12 = $('.d1 img').hasClass('o') && $('.d5 img').hasClass('o') && $('.d9 img').hasClass('o');
+    const winCondition13 = $('.d4 img').hasClass('o') && $('.d5 img').hasClass('o') && $('.d6 img').hasClass('o');
+    const winCondition14 = $('.d7 img').hasClass('o') && $('.d8 img').hasClass('o') && $('.d9 img').hasClass('o');
+    const winCondition15 = $('.d3 img').hasClass('o') && $('.d6 img').hasClass('o') && $('.d9 img').hasClass('o');
+    const winCondition16 = $('.d7 img').hasClass('o') && $('.d5 img').hasClass('o') && $('.d3 img').hasClass('o');
 
-    
-    const o1 = div1ImgSrc === imgSrc1;
-    const o2 = div2ImgSrc === imgSrc1;
-    const o3 = div3ImgSrc === imgSrc1;
 
-    const o4 = div1ImgSrc === imgSrc1;
-    const o5 = div4ImgSrc === imgSrc1;
-    const o6 = div7ImgSrc === imgSrc1;
-
-    const o7 = div2ImgSrc === imgSrc1;
-    const o8 = div5ImgSrc === imgSrc1;
-    const o9 = div8ImgSrc === imgSrc1;
-
-    const win123 = o1 && o2 && o3 ;
-    const win147 = o4 && o5 && o6 ;
-    const win258 = o7 && o8 && o9 ;
-    const win159 = div1ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const win456 = div4ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 ;
-    const win789 = div7ImgSrc === imgSrc1 && div8ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const win369 = div3ImgSrc === imgSrc1 && div6ImgSrc === imgSrc1 && div9ImgSrc === imgSrc1 ;
-    const win753 = div7ImgSrc === imgSrc1 && div5ImgSrc === imgSrc1 && div3ImgSrc === imgSrc1 ;
-
-    const winCondition9 = div1ImgSrc === imgSrc2 && div2ImgSrc === imgSrc2 && div3ImgSrc === imgSrc2 ;
-    const winCondition10 = div1ImgSrc === imgSrc2 && div4ImgSrc === imgSrc2 && div7ImgSrc === imgSrc2 ;
-    const winCondition11 = div2ImgSrc === imgSrc2 && div5ImgSrc === imgSrc2 && div8ImgSrc === imgSrc2 ;
-    const winCondition12 = div1ImgSrc === imgSrc2 && div5ImgSrc === imgSrc2 && div9ImgSrc === imgSrc2 ;
-    const winCondition13 = div4ImgSrc === imgSrc2 && div5ImgSrc === imgSrc2 && div6ImgSrc === imgSrc2 ;
-    const winCondition14 = div7ImgSrc === imgSrc2 && div8ImgSrc === imgSrc2 && div9ImgSrc === imgSrc2 ;
-    const winCondition15 = div3ImgSrc === imgSrc2 && div6ImgSrc === imgSrc2 && div9ImgSrc === imgSrc2 ;
-    const winCondition16 = div7ImgSrc === imgSrc2 && div5ImgSrc === imgSrc2 && div3ImgSrc === imgSrc2 ;
     
     const randomIndex = Math.floor(Math.random() * 200);
 
@@ -115,51 +108,21 @@ button.on('click', function(){
         // it loops through the win conditons 
             //if any match it return that condition and the next funcitonn that accepts conditons 
                 //checks add turns9 to the condtion and returns Xwon
-
-
         // Turn this into a function that accepts a win conditon
-    if(win123 && turns9){
-        Xwon()
-    } else if(win147 && turns9){
-        Xwon()
-    } else if(win258 && turns9){
-       Xwon()
-    } else if(win159 && turns9){
-       Xwon()
-    } else if(win456 && turns9){
-       Xwon()
-    } else if(win789 && turns9){
-        Xwon()
-    } else if(win369 && turns9){
-        Xwon()
-    } else if(win753 && turns9){
-        Xwon()
-    } else if(winCondition9 && turns9){
-        Ywon()
-    } else if(winCondition10 && turns9){
-        Ywon()
-    } else if(winCondition11 && turns9){
-        Ywon()
-    } else if(winCondition12 && turns9){
-        Ywon()
-    } else if(winCondition13 && turns9){
-        Ywon()
-    } else if(winCondition14 && turns9){
-        Ywon()
-    } else if(winCondition15 && turns9){
-        Ywon()
-    } else if(winCondition16 && turns9){
-        Ywon()
-    } else if($('.btn').attr('disabled') && turns === 9){
-        draw()
-    } ;
-
+        
+//Group the X in one if || and the Y in an else if || 
+    if(turns9){
+        if(winCondition1 || winCondition2 || winConditino3 || winCondition4 || winCondition5 || winCondition6 || winCondition7 || winCondition8){
+            Xwon()
+        } else if(winCondition9 || winCondition10 || winCondition11 || winCondition12 || winCondition13 || winCondition14 || winCondition15 || winCondition16){
+            Ywon()
+        } else if($('.btn').attr('disabled')){
+            draw()
+        } ;
+    }
 });
 
-
-
 // I need a funtion that clears that div when either X or O reach 5 wins
-
 
 resetButton.on('click', function(){
     $('button, btn').attr('disabled', false);
@@ -169,6 +132,8 @@ resetButton.on('click', function(){
     turns = 0;
 })
 
+
+/* NOt WORKING
 let computerTurn = turns % 2 !== 0
 
 const robotTurn = function(turns){
@@ -178,19 +143,9 @@ const robotTurn = function(turns){
         }
     }
 }
-
-
-
 robotTurn(turns);
 
-
-
-
-
-
-
-
-
+*/
 // Alright so to have a robot play
         //if the turn is on an odd number 
             //get a function that generates a random number, 
