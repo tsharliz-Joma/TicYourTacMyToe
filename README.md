@@ -19,56 +19,12 @@ There is a score board on eithe rside of the squares keeping count of who has wo
 
 In had to play around abit with the positioning of where the end result was displayed which was a touch annoying it did not end up 
 how i wanted it to so i had to make it a stand centered display.
-Also with the score-board i could not get the test of the score-board to wrap so if you win a certain number of times the text flows off the screen 
-Paragraphs are respected
+I struggled getting an AI to play against although i believe i was close and will be able to in the verson 2.0
 
-New lines are separeting yout paragraph
+I used bootstrap just because it was the first thing that came to my head when i thought buttons to press, i did realise it is a touch annoying and it influenced my logic a little but we learn
 
+## How To.
 
-# Tic your tac my Toe
-Welcome to my Project 0
+Just go to this [.....]() which at this point i cant figure out why it wont work but i just want to finish this.
 
-## Textual Emphasis
-
-Here is a **Bold** and *italic* text paragraph
-
-You can also do _this_ by adding __underscores__
-
-Wow this is ***intense***
-
-
-## Lists 
-
-- Groucho 
-- Harpo
-- Chico
-
-
-## Numbered Lists 
-1. Groucho 
-1. Harpo
-1. Chico
-1. Zeppo 
-
-
-## Links 
-Links are important! Here is a link to [Github](http://www.github.com/). 
-- We will need a link from the repo to the game itself 
-
-
-
-## Imagees
-
-*Firsr you alt text*
-![Bill Murray](http://www.fillmurray.com/50/50)
-
-## Code 
-
-A commonly used variable in the browser is called `document`. See also: `window` which also crops up a lot. jQuery sues teh `$` variable
-
-
-```Javascript
-const hey = funtion(){
-    console.log('Hello World')
-}
-```
+There is no installation needed...I think but have fun <d-_-b>.
