@@ -1,20 +1,31 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Righteous&family=Yellowtail&display=swap');
-/*font-family: 'Orbitron', sans-serif;
-font-family: 'Righteous', cursive;
-font-family: 'Yellowtail', cursive;*/
 
 
 * {
     box-sizing:border-box;
-    margin: 0;
-    padding: 0;
+    background-color: black;
+}
+
+.font1{
+    font-family: 'Orbitron', sans-serif;
+    color: gold;
+}
+
+.font2{
+    font-family: 'Righteous', cursive;
+    color: gold;
+}
+
+.font3{
+    font-family: 'Yellowtail', cursive;
+    color: gold;
 }
 
 
 .text-center {
-    font-size: 4em;
+    font-size: 3em;
 }
 .square {
     
@@ -27,14 +38,14 @@ font-family: 'Yellowtail', cursive;*/
     width: 150px;
 }
 
-.x{
+.x, .o{
     height: 190px;
     width: 190px;
 }
 
-.o{
-    height: 190px;
-    width: 190px;
+.OkeepingCount, .XkeepingCount {
+    color: gold;
+    overflow-wrap: break-word;
 }
 
 .btn:disabled{
@@ -58,7 +69,8 @@ font-family: 'Yellowtail', cursive;*/
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
-    transform: translateX(185%);
+    transform: translateX(150%);
+
 }
 
 .visible {
@@ -71,5 +83,19 @@ font-family: 'Yellowtail', cursive;*/
 }
 
 .reset {
-    transform: translateX(600%)
+    transform: translateX(600%);
+    border-radius: 50px;
+    border: 3px groove gold;
+    font-size:  .5em;
+    color: grey;
+    height: 100px;
+    width: 100px;
+}
+
+.gameOver {
+    color: grey;
+}
+
+.winner {
+    background-clip: text;
 }
