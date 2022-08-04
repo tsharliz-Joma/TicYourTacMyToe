@@ -89,7 +89,6 @@ button.on('click', function(){
 
 });
 
-
 resetButton.on('click', function(){
     $('button, btn').attr('disabled', false);
     gameOver.removeClass('visible');
