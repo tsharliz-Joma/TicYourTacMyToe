@@ -9,7 +9,7 @@ const row = $('.row');
 const set0 = '<img class="o" src="./images/pepe2.png">';
 const set0win = '<img class="o" src="./images/pepeGold.png">';
 const setX = '<img class="x" src="./images/sassy2.png">'
-const setXwin = '<img class="x" src="./images/sassyGold.png">'
+const setXwin = '<img class="x" src="./images/SassyGold.png">'
 const gameOver = $('.gameOver')
 const gameOverText = $('.gameOverText')
 const Ywins = $('.Xwins');
