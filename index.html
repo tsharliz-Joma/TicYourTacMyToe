@@ -9,21 +9,25 @@
             <link rel="stylesheet" href="./css/style.css">
             <link rel="stylesheet" href="./bootstrap_css/css/bootstrap.css">
         </head> 
-        <body class="bg-dark">
+        <body>
 
             
+            <!-- col-12 -->
+        <div class="outer-most-container ">
+            <div class="text-center"> <span class="font1">Tic</span> My <span class="font2">Tac</span> your <span class="font3">Toe</span></div> 
+            <!-- container col-12 d-flex justify-content-between -->
+            <div class="middle-container">
 
-        <div class="container col-12">
-            <h1 class="text-center"> <span class="font1">Tic</span> My <span class="font2">Tac</span> your <span class="font3">Toe</span></h1> 
-            
-            <div class="container col-12 d-flex justify-content-between">
-                
-                <div class="col-2 text-center">
-                    <p class="font2">Pepe</p>
-                    <p class="OkeepingCount"></p>
+
+                <!-- col-2 text-center -->
+                <div class="pepe-score-div score-count">
+                    <div class="font2">Pepe</div>
+                    <div class="OkeepingCount "></div>
                 </div>
 
-                <div class="row col-6 justify-content-center">
+                
+                <!-- row col-6 justify-content-center -->
+                <div class="buttons-container">
                     <button class=" d1 col-4 square border-end border-bottom btn"></button>
                     <button class=" d2 col-4 square border-end border-bottom border-start btn"><div></div></button>
                     <button class=" d3 col-4 square border-bottom border-start btn"><div></div></button>
@@ -34,11 +38,14 @@
                     <button class=" d8 col-4 square border-start border-top border-end btn"><div></div></button>
                     <button class=" d9 col-4 square border-start border-top btn"><div></div></button>
                 </div>
-                
-                <div class="col-2 text-center">
-                    <p class="font2">Sassy</p>
-                    <p class="XkeepingCount"></p>
+
+                <!-- col-2 text-center -->
+                <div class="sassy-score-div score-count">
+                    <div class="font2">Sassy</div>
+                    <div class="XkeepingCount "></div>
                 </div>
+                
+                
                 
                 <div class="col-12 text-center gameOver">
                     <span class="gameOverText"></span>

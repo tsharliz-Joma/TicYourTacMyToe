@@ -4,7 +4,7 @@ const button = $('.btn');
 const img = $('img');
 let turns = 0 ;
 
-const row = $('.row');
+const buttonsContainer = $('.buttons-container');
 
 const set0 = '<img class="o" src="./images/pepe2.png">';
 const set0win = '<img class="o" src="./images/pepeGold.png">';
@@ -59,7 +59,7 @@ button.on('click', function(){
         gameOver.addClass('visible');
         gameOverText.html(`${setXwin} wins`)
         gameOverText.css({'transform': `translateX(${150}%)`})
-        row.addClass('invisible')
+        buttonsContainer.addClass('invisible')
         $('.XkeepingCount').append('I')
     }
 
@@ -69,13 +69,13 @@ button.on('click', function(){
         gameOver.addClass('visible');
         gameOverText.html(`${set0win} wins`)
         gameOverText.css({'transform': `translateX(${150}%)`})
-        row.addClass('invisible')
+        buttonsContainer.addClass('invisible')
     }
     const draw = function(){
         gameOver.addClass('visible')
         gameOverText.css({'transform': `translateX(${390}%)`})
         gameOverText.html('Draw')
-        row.addClass('invisible')
+        buttonsContainer.addClass('invisible')
         
     }
 
@@ -92,7 +92,7 @@ button.on('click', function(){
 resetButton.on('click', function(){
     $('button, btn').attr('disabled', false);
     gameOver.removeClass('visible');
-    row.removeClass('invisible');
+    buttonsContainer.removeClass('invisible');
     $('button img').remove();
     turns = 0;
 });
