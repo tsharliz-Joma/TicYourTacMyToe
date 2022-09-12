@@ -2,64 +2,54 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Righteous&family=Yellowtail&display=swap');
 
-
-* {
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
+.full-restart {
+    background: grey;
+    margin-top: 30px;
+    padding-top: -10px;
+    width: 100%;
+    outline: none;
+    color: gold
 }
 
-.outer-most-container {
-    background-color: black;
-    height: 100vh;
-    padding-top: 10px;
-    display: block;
-    max-width: 100vw;
-}
+@media (max-width: 1024px){
 
-.middle-container {
-    justify-content: space-between;
-    display: flex;
-}
-
-.pepe-score-div, .sassy-score-div {
-    display: inline-flex;
-    text-align: center;
-    height: 200px;
-    width: 200px;
-}
-
-.score-count {
-    display: block;
-    font-size: 3em;
-}
-
-
-@media (max-width: 500px){
-    .score-count{
-        display: visible;
+    * {
+        box-sizing:border-box;
+        margin: 0;
+        padding: 0;
     }
-    .buttons-container{
-        padding: 15px;
-    }
-    .outer-most-container{
-        width: 100%;
-    }
-    .buttons-container button {
+    
+    .inner-scoreboard-div {
+        height: 50%;
+        display: inline-flex;
         margin: 0 auto;
     }
-    .scoreboard{
-        display: inline-flex;
+
+    .buttons-container {
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0 auto;
+
     }
-    .score-count {
-        font-size: 1.5em;
-        width: 190px;;
+
+    .buttons-container button {
+        margin: 0 auto;
+        width: 30%;
+        height: 30%;
+    }
+
+    .scoreboard {
+        display: inline-flex;
+        width: 100%;
+        height: 200px
     }
    
     #heading-text {
         font-size: 2em;
     }
-    #img-square{
+    #img-square {
         height: 80px;
         width: 80px;
     } 
@@ -67,12 +57,8 @@
         width: 100%;
         height: 50vh;
     }
-
-    
-}
-
-/* @media (max-width: 500px){qq
     .outer-most-container {
+        width: 100%;
         background-color: black;
         height: 100vh;
         padding-top: 10px;
@@ -88,26 +74,16 @@
     .pepe-score-div, .sassy-score-div {
         display: inline-flex;
         text-align: center;
+        margin-left: 30px;
         height: 200px;
-        width: 200px;
+        width: 150px;
     }
-    
+
     .score-count {
         display: block;
         font-size: 3em;
     }
-
-    .buttons-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    .buttons-container button {
-        width: 30%;
-        height: 30%;
-    }
+        
 
     .font1, .font2, .font3 {
         color: gold;
@@ -126,10 +102,10 @@
         font-family: 'Yellowtail', cursive;
     }
 
-
     .text-center {
         font-size: 3em;
     }
+      
     .square {
         height: 200px;
         border: 2px solid black;
@@ -140,32 +116,25 @@
         width: 150px;
     }
 
-    .x, .o{
-        height: 190px;
-        width: 190px;
-    }
-
     .OkeepingCount, .XkeepingCount {
         color: gold;
         overflow-wrap: break-word;
     }
-
+    
     .btn:disabled{
         opacity: 1 !important;
         cursor: not-allowed;
     }
 
-    .character-select-div p {
-        
-    }
     .character-select-div {
-        color: white;
+        max-width: 100%;
         height: 200px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        color: white;
         background-color: black;
         margin: 0 auto;
         font-family: 'Obitron ';
-        font-weight: 500;
-        letter-spacing: 3px;;
     }
 
     .character-select-div button {
@@ -178,6 +147,9 @@
     .gameOver {
         display: none;
         max-width: 100%;
+        color: grey;
+        font-weight: 500;
+        letter-spacing: 2px;
     }
 
     .gameOverText {
@@ -186,7 +158,6 @@
         font-family: sans-serif;
         font-weight: bold;
         text-align: center; 
-        
     }
 
     .visible {
@@ -197,7 +168,7 @@
         transition: 0.1s ease-out;
         display: hidden;
     }
-
+    
     #game-over-div {
         width: 100%;
         margin: 0 auto;
@@ -215,18 +186,8 @@
         width: 100px;
     }
 
-    .gameOver {
-        color: grey;
-        
-    }
-
     .winner {
         background-clip: text;
-    }
-
-    .character-select-div{
-        width: 100%;
-    
     }
 
     .character-select-div div {
@@ -248,157 +209,4 @@
     .game-button {
         background-color: black;
     }
-        
-} */
-
-.buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.buttons-container button {
-    width: 30%;
-    height: 30%;
-}
-
-.font1, .font2, .font3 {
-    color: gold;
-}
-
-.font1{
-    font-family: 'Orbitron', sans-serif;
-}
-
-.font2{
-    font-family: 'Righteous', cursive;
-    
-}
-
-.font3{
-    font-family: 'Yellowtail', cursive;
-}
-
-
-.text-center {
-    font-size: 3em;
-}
-.square {
-    height: 200px;
-    border: 2px solid black;
-}
-
-.imgSquare{
-    height: 150px;
-    width: 150px;
-}
-
-.x, .o{
-    height: 190px;
-    width: 190px;
-}
-
-.OkeepingCount, .XkeepingCount {
-    color: gold;
-    overflow-wrap: break-word;
-}
-
-.btn:disabled{
-    opacity: 1 !important;
-    cursor: not-allowed;
-}
-
-.character-select-div p {
-    
-}
-.character-select-div {
-    color: white;
-    height: 200px;
-    background-color: black;
-    margin: 0 auto;
-    font-family: 'Obitron ';
-    font-weight: 500;
-    letter-spacing: 3px;;
-}
-
-.character-select-div button {
-
-    padding: 25px;
-    display: inline-flex;
-    justify-content: space-around;
-}
-
-.gameOver {
-    display: none;
-    max-width: 100%;
-}
-
-.gameOverText {
-    display: inline-block;
-    font-size: 60px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: center; 
-    
-}
-
-.visible {
-    display: inline-block;
-}
-
-.invisible {
-    transition: 0.1s ease-out;
-    display: hidden;
-}
-
-#game-over-div {
-    width: 100%;
-    margin: 0 auto;
-    margin-right:  110px;
-}
-
-.reset {
-    border-radius: 50px;
-    display: inline;
-    margin: auto;
-    border: 3px solid gold;
-    font-size:  .5em;
-    color: grey;
-    height: 100px;
-    width: 100px;
-}
-
-.gameOver {
-    color: grey;
-    
-}
-
-.winner {
-    background-clip: text;
-}
-
-.character-select-div{
-    width: 100%;
-   
-}
-
-.character-select-div div {
-    width: 100%;
-    padding-left: 12px;
-    
-    margin: 0 auto;
-}
-
-.char-button {
-    margin: 0 10px;
-    border-radius: 100%;
-    border: 1px solid gold;
-    color: black;
-    font-weight: 500;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.game-button {
-    background-color: black;
 }

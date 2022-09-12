@@ -1,5 +1,3 @@
-
-
 const button = $('.game-button');
 const img = $('img');
 let turns = 0 ;
@@ -14,8 +12,6 @@ let setX = '<img class="x " id="img-square" src="./images/robinhood.png">'
 let setXwin = '<img class="x " id="img-square" src="./images/SassyGold.png">'
 const gameOver = $('.gameOver')
 const gameOverText = $('.gameOverText')
-// const Ywins = $('.Xwins');
-// const Xwins = $('.Ywins');
 
 let robinhood = $('.robinhood');
 let blue = $('.blue');
@@ -23,15 +19,17 @@ let pepe = $('.pepe');
 let sassy = $('.sassy');
 let charButton = $('.char-button')
 
-const resetButton = $('.reset')
+const resetButton = $('.reset');
+
+button.attr('disabled', true)
+
 
 const characterSelect = () => {
 
-    console.log($('.sassy-score-div .font2').text())
     let charactersSelected = [];
 
     let charTurn = 0;
-    
+
     const checkSelected = () => {
         if(charTurn < 2){
             button.attr('disabled', true)
@@ -40,28 +38,24 @@ const characterSelect = () => {
             button.attr('disabled', false)
         } 
     }
-    let player1Name = $('')
   
     robinhood.on('click', function(){
         charTurn++
         if(charTurn <= 1){
             robinhood.attr('disabled', true);
-            $('.player1').text('Robinhood');
+            $('.player1').text('Robin');
             charactersSelected.push('robinhood')
-            set0 = '<img class="o" id="img-square" src="./images/robinhood.png">';
-            set0win = '<img class="o" id="img-square" src="./images/robinhood.png">';
-            console.log(robinhood)
+            set0 = '<img class="x" id="img-square" src="./images/robinhood.png">';
+            set0win = '<img class="x" id="img-square" src="./images/robinhood.png">';
             checkSelected();
         } else if(charTurn === 2){
             robinhood.attr('disabled', true);
-            $('.player2').text('Robinhood');
+            $('.player2').text('Robin');
             charactersSelected.push('robinhood')
-            setX = '<img class="x" id="img-square" src="./images/robinhood.png">';
-            setXwin = '<img class="x" id="img-square" src="./images/robinhood.png">';
-            console.log(robinhood)
+            setX = '<img class="o" id="img-square" src="./images/robinhood.png">';
+            setXwin = '<img class="o" id="img-square" src="./images/robinhood.png">';
             checkSelected();
         }
-       
     });
 
     blue.on('click', function(){
@@ -70,20 +64,17 @@ const characterSelect = () => {
             blue.attr('disabled', true);
             $('.player1').text('Blue')
             charactersSelected.push('blue');
-            set0 = '<img class="o" id="img-square" src="./images/blue.png">';
-            set0win = '<img class="o" id="img-square" src="./images/blue.png">';
-            console.log(blue)
+            set0 = '<img class="x" id="img-square" src="./images/blue.png">';
+            set0win = '<img class="x" id="img-square" src="./images/blue.png">';
             checkSelected();
         } else if(charTurn === 2){
             blue.attr('disabled', true);
             $('.player2').text('Blue')
             charactersSelected.push('blue');
-            setX = '<img class="x" id="img-square" src="./images/blue.png">';
-            setXwin = '<img class="x" id="img-square" src="./images/blue.png">';
-            console.log(blue)
+            setX = '<img class="o" id="img-square" src="./images/blue.png">';
+            setXwin = '<img class="o" id="img-square" src="./images/blue.png">';
             checkSelected();
-        }
-       
+        }  
     });
 
     sassy.on('click', function(){
@@ -92,21 +83,17 @@ const characterSelect = () => {
             sassy.attr('disabled', true);
             $('.player1').text('Sassy')
             charactersSelected.push('sassy')
-            set0 = '<img class="o" id="img-square" src="./images/sassy2.png">';
-            set0win = '<img class="o" id="img-square" src="./images/sassyGold.png">';
-            console.log(sassy)
+            set0 = '<img class="x" id="img-square" src="./images/sassy2.png">';
+            set0win = '<img class="x" id="img-square" src="./images/sassyGold.png">';
             checkSelected();
         } else if(charTurn === 2 ){
             sassy.attr('disabled', true);
             $('player2').text('Sassy');
             charactersSelected.push('sassy')
-            setX = '<img class="x" id="img-square" src="./images/sassy2.png">';
-            setXwin = '<img class="x" id="img-square" src="./images/sassyGold.png">';
-            console.log(sassy)
+            setX = '<img class="o" id="img-square" src="./images/sassy2.png">';
+            setXwin = '<img class="o" id="img-square" src="./images/sassyGold.png">';
             checkSelected();
-        }
-
-        
+        }  
     });
 
     pepe.on('click', function(){
@@ -115,23 +102,21 @@ const characterSelect = () => {
         pepe.attr('disabled', true);
         $('.player1').text('Pepe');
         charactersSelected.push('pepe');
-        set0 = '<img class="o" id="img-square" src="./images/pepe2.png">';
-        set0win = '<img class="o" id="img-square" src="./images/pepeGold.png">';
-        console.log(pepe)
+        set0 = '<img class="x" id="img-square" src="./images/pepe2.png">';
+        set0win = '<img class="x" id="img-square" src="./images/pepeGold.png">';
+        checkSelected();
         } else if(charTurn === 2){
         pepe.attr('disabled', true);
         $('.player2').text('Pepe');
         charactersSelected.push('pepe');
-        setX = '<img class="x" id="img-square" src="./images/pepe2.png">';
-        setXwin = '<img class="x" id="img-square" src="./images/pepeGold.png">';
-        console.log(pepe)
+        setX = '<img class="o" id="img-square" src="./images/pepe2.png">';
+        setXwin = '<img class="o" id="img-square" src="./images/pepeGold.png">';
+        checkSelected();
         }
 
     });
 
 }
-
-
 
 const start = () => {
 
@@ -149,9 +134,9 @@ const start = () => {
     const buttonDisabled = $(this).attr('disabled', true);
 
     if(imgXO){
-        $(this).html(set0); 
+        $(this).html(setX); 
     } else {
-        $(this).html(setX);
+        $(this).html(set0);
     };
     
     if(noMoreTurns){
@@ -177,42 +162,44 @@ const start = () => {
     const winCondition16 = $('.d7 img').hasClass('o') && $('.d5 img').hasClass('o') && $('.d3 img').hasClass('o');
 
     const Xwon = function(){
+        xScore++
         button.attr('disabled', true)
         gameOver.addClass('visible');
-        gameOverText.html(`${setXwin} wins`);
-        // gameOverText.css({'transform': `translateX(${150}%)`})
+        gameOverText.html(`${set0win} wins`);
         buttonsContainer.addClass('invisible')
-        xScore++
-        $('.XkeepingCount').append(xScore)
+        $('.XkeepingCount').text(xScore)
     }
-
+    
     const Ywon = function(){
         yScore++
-        $('.OkeepingCount').append(yScore)
         button.attr('disabled', true)
         gameOver.addClass('visible');
-        gameOverText.html(`${set0win} wins`)
-        // gameOverText.css({'transform': `translateX(${150}%)`})
+        gameOverText.html(`${setXwin} wins`)
+   
         buttonsContainer.addClass('invisible')
+        $('.OkeepingCount').text(yScore)
+        
     }
+
     const draw = function(){
         gameOver.addClass('visible')
-        gameOverText.css({'transform': `translateX(${390}%)`})
         gameOverText.html('Draw')
         buttonsContainer.addClass('invisible')
-        
     }
 
         if(winCondition1 || winCondition2 || winCondition3 || winCondition4 || winCondition5 || winCondition6 || winCondition7 || winCondition8){
             Xwon()
         } else if(winCondition9 || winCondition10 || winCondition11 || winCondition12 || winCondition13 || winCondition14 || winCondition15 || winCondition16){
             Ywon()
-        } else if($('.btn').attr('disabled') && turns >= 9){
+        } else if($('.game-button').attr('disabled') && turns >= 9){
             draw()
         } ;
     })
 };
-start();
+
+$('.full-restart').on('click', function(){
+    window.location.reload()
+})
 
 resetButton.on('click', function(){
     $('button, btn').attr('disabled', false);
@@ -221,6 +208,8 @@ resetButton.on('click', function(){
     $('button img').remove();
     turns = 0;
 });
+
+start();
 
 
 
