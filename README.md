@@ -27,6 +27,6 @@ I used bootstrap just because it was the first thing that came to my head when i
 
 !IMPORTAMT-  Now it is made for mobile, probably best on nothing bigger than a 12pro and after 1024px, it will crash and burn so just a heads up
 
-Just go to this >>>> [.....] <<<< (https://tsharliz-joma.github.io/TicYourTacMyToe/) ~~which at this point i cant figure out why it wont work but i just want to finish this~~ and play to your hearts content.
+Just go to this >>>> [.....](https://tsharliz-joma.github.io/TicYourTacMyToe/) <<<<  ~~which at this point i cant figure out why it wont work but i just want to finish this~~ and play to your hearts content.
 
 There is no installation needed...I think but have fun <d-_-b>.
