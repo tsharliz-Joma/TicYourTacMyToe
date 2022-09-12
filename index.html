@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html class="bg-dark">
+    <html >
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,50 +11,60 @@
         </head> 
         <body>
 
-            
             <!-- col-12 -->
         <div class="outer-most-container ">
-            <div class="text-center"> <span class="font1">Tic</span> My <span class="font2">Tac</span> your <span class="font3">Toe</span></div> 
+            <div class="text-center " id="heading-text"> <span class="font1">Tic</span> My <span class="font2">Tac</span> your <span class="font3">Toe</span></div> 
             <!-- container col-12 d-flex justify-content-between -->
-            <div class="middle-container">
+            <div class="middle-container" id="middle-container">
 
+                <!-- row col-6 justify-content-center -->
+                <div class="buttons-container" id="buttons-container">
+                    <button class=" d1  square border-end border-bottom game-button"></button>
+                    <button class=" d2  square border-end border-bottom border-start game-button"><div></div></button>
+                    <button class=" d3  square border-bottom border-start game-button"><div></div></button>
+                    <button class=" d4  square border-top border-end border-bottom game-button"><div></div></button>
+                    <button class=" d5  square border game-button"><div></div></button>
+                    <button class=" d6  square border-top border-start border-bottom game-button"><div></div></button>
+                    <button class=" d7  square border-top border-end game-button"><div></div></button>
+                    <button class=" d8  square border-start border-top border-end game-button"><div></div></button>
+                    <button class=" d9  square border-start border-top game-button"><div></div></button>
+                </div>
+
+                <div class=" gameOver" id="game-over-div">
+                    <div class="gameOverText">
+                    </div>
+                  
+
+                    <button class="reset">Reset</button>
+                
+                </div>
+                
+
+            </div>
+            <div class="scoreboard">
+                <!-- col-2 text-center -->
+                <div class="sassy-score-div score-count">
+                    <div class="font2 player1">Sassy</div>
+                    <div class="XkeepingCount "></div>
+                </div>
 
                 <!-- col-2 text-center -->
                 <div class="pepe-score-div score-count">
-                    <div class="font2">Pepe</div>
+                    <div class="font2 player2">Pepe</div>
                     <div class="OkeepingCount "></div>
                 </div>
-
                 
-                <!-- row col-6 justify-content-center -->
-                <div class="buttons-container">
-                    <button class=" d1  square border-end border-bottom btn"></button>
-                    <button class=" d2  square border-end border-bottom border-start btn"><div></div></button>
-                    <button class=" d3  square border-bottom border-start btn"><div></div></button>
-                    <button class=" d4  square border-top border-end border-bottom btn"><div></div></button>
-                    <button class=" d5  square border btn"><div></div></button>
-                    <button class=" d6  square border-top border-start border-bottom btn"><div></div></button>
-                    <button class=" d7  square border-top border-end btn"><div></div></button>
-                    <button class=" d8  square border-start border-top border-end btn"><div></div></button>
-                    <button class=" d9  square border-start border-top btn"><div></div></button>
-                </div>
-
-                <!-- col-2 text-center -->
-                <div class="sassy-score-div score-count">
-                    <div class="font2">Sassy</div>
-                    <div class="XkeepingCount "></div>
-                </div>
-                
-                
-                
-                <div class="col-12 text-center gameOver">
-                    <span class="gameOverText"></span>
-                    <span class="Xwins"></span>
-                    <span class="Ywins"></span>
-                    <button class="reset">Reset</button>
-                </div>
-            
             </div>
+            
+                <div class="character-select-div">
+                    <p>Character Select</p>
+                    <div>
+                        <button class="char-button robinhood">R</button>
+                        <button class="char-button blue">B</button>
+                        <button class="char-button pepe">P</button>
+                        <button class="char-button sassy">S</button>
+                    </div>
+                </div>
 
         <script src="./Jquery/Jquery.js"></script>
         <script src="./boostrap_js/js/bootstrap.js"></script>
