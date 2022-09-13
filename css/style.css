@@ -11,8 +11,6 @@
     color: gold
 }
 
-@media (max-width: 1024px){
-
     * {
         box-sizing:border-box;
         margin: 0;
@@ -209,4 +207,4 @@
     .game-button {
         background-color: black;
     }
-}
+
